@@ -20,5 +20,14 @@
         android:id="@+id/homeFragment"
         android:name="com.example.machinelearning.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_objectDetectionFragment"
+            app:destination="@id/objectDetectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/objectDetectionFragment"
+        android:name="com.example.machinelearning.ObjectDetectionFragment"
+        android:label="fragment_object_detection"
+        tools:layout="@layout/fragment_object_detection" />
 </navigation>
