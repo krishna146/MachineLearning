@@ -24,10 +24,50 @@
         <action
             android:id="@+id/action_homeFragment_to_objectDetectionFragment"
             app:destination="@id/objectDetectionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_languageDetectionFragment"
+            app:destination="@id/languageDetectionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_textTransFragment"
+            app:destination="@id/textTransFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_textImageFragment"
+            app:destination="@id/textImageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scanBarcodeFragment"
+            app:destination="@id/scanBarcodeFragment" />
     </fragment>
     <fragment
         android:id="@+id/objectDetectionFragment"
         android:name="com.example.machinelearning.ObjectDetectionFragment"
         android:label="fragment_object_detection"
         tools:layout="@layout/fragment_object_detection" />
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="com.example.machinelearning.ChatBotFragment"
+        android:label="fragment_chat_bot"
+        tools:layout="@layout/fragment_chat_bot" />
+    <fragment
+        android:id="@+id/scanBarcodeFragment"
+        android:name="com.example.machinelearning.ScanBarcodeFragment"
+        android:label="fragment_scan_barcode"
+        tools:layout="@layout/fragment_scan_barcode" />
+    <fragment
+        android:id="@+id/languageDetectionFragment"
+        android:name="com.example.machinelearning.LanguageDetectionFragment"
+        android:label="fragment_language_detection"
+        tools:layout="@layout/fragment_language_detection" />
+    <fragment
+        android:id="@+id/textImageFragment"
+        android:name="com.example.machinelearning.TextImageFragment"
+        android:label="fragment_text_image"
+        tools:layout="@layout/fragment_text_image" />
+    <fragment
+        android:id="@+id/textTransFragment"
+        android:name="com.example.machinelearning.TextTransFragment"
+        android:label="fragment_text_trans"
+        tools:layout="@layout/fragment_text_trans" />
 </navigation>

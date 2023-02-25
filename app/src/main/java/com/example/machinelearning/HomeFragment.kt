@@ -31,6 +31,21 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.btnLangDetec.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_languageDetectionFragment)
+        }
+        binding.txtTransl.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_textTransFragment)
+        }
+        binding.btnChatBot.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_chatBotFragment)
+        }
+        binding.btnTxtFromImg.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_textImageFragment)
+        }
+        binding.btnScanBar.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_scanBarcodeFragment)
+        }
         binding.btnImgLabel.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_objectDetectionFragment)
         }
