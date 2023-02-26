@@ -73,6 +73,12 @@ dependencies {
     //language translation library
     implementation 'com.google.mlkit:translate:17.0.1'
 
+    //textFromImage Library
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.2'
+
+    //barcode library
+    implementation 'com.google.mlkit:barcode-scanning:17.0.3'
+
     //sweet alert dialog box
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
 

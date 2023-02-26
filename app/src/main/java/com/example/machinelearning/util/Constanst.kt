@@ -1,3 +1,3 @@
 package com.example.machinelearning.util
 
-const val TAG = "KRISHNA"
+const val TAG = "HELLO"
