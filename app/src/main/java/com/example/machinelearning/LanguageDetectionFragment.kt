@@ -38,7 +38,7 @@ class LanguageDetectionFragment : Fragment() {
         var textViewText: String = ""
         languageIdentifier.identifyLanguage(langText)
             .addOnSuccessListener { languageCode ->
-                if (languageCode == "ud") {
+                if (languageCode == "und") {
                     binding.txtDetectedLang.text = "Can't detect Language"
                 } else {
                     val loc = Locale(languageCode)
