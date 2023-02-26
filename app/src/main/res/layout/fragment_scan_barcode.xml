@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/qrbg"
     tools:context=".ScanBarcodeFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
         android:background="@drawable/ic_bg_heading"
         android:gravity="center"
         android:orientation="vertical"
@@ -25,10 +25,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Android Barcode Scanner"
-            android:textColor="@color/black"
+            android:textColor="#FDE61E"
+            android:textStyle="italic"
             android:textSize="25sp" />
-
-
     </LinearLayout>
 
     <ImageView
@@ -37,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/qrimage"
+        android:src="@drawable/qrcode"
         app:layout_constraintBottom_toTopOf="@+id/btnScanQr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/txtCodeResult"
@@ -45,12 +44,15 @@
 
     <TextView
         android:id="@+id/txtCodeResult"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:text="Result"
-        android:visibility="gone"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Not a valid QR"
         android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/btnScanQr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,8 +62,12 @@
         android:id="@+id/btnScanQr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Scan Barcode"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_bg_btn"
+        android:paddingHorizontal="60dp"
+        android:paddingVertical="15dp"
+        android:text="Scan"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

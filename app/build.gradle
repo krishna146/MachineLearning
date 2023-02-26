@@ -82,5 +82,4 @@ dependencies {
     //sweet alert dialog box
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
 
-
 }

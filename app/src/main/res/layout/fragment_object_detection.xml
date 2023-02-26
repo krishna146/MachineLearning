@@ -2,12 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/imglabel">
 
     <ImageView
         android:id="@+id/imgSelected"
         android:layout_width="match_parent"
         android:layout_height="500dp"
+        android:src="#FBEA50"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="20dp"
         android:scaleType="fitXY"
@@ -42,8 +44,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:padding="12dp"
+        android:background="@drawable/ic_bg_btn"
+        android:paddingHorizontal="30dp"
         android:text="choose Picture"
+        android:paddingVertical="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -1,11 +1,14 @@
 package com.example.machinelearning
 
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.example.machinelearning.databinding.FragmentTextTransBinding
@@ -28,6 +31,7 @@ class TextTransFragment : Fragment() {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.S)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnTranslate.setOnClickListener {
@@ -49,6 +53,7 @@ class TextTransFragment : Fragment() {
         pDialog.setCancelable(false)
     }
 
+    @RequiresApi(Build.VERSION_CODES.S)
     private fun prepareTranslateModel() {
         val options: TranslatorOptions =
             TranslatorOptions.Builder().setSourceLanguage(TranslateLanguage.ENGLISH)
@@ -66,7 +71,8 @@ class TextTransFragment : Fragment() {
 
     }
 
-    private fun translateText(englishHindiTranslator: Translator) {
+    @RequiresApi(Build.VERSION_CODES.S)
+    private fun translateText(englishHindiTranslator: com.google.mlkit.nl.translate.Translator) {
         pDialog.titleText = "Translate Text"
         pDialog.show()
         englishHindiTranslator.translate(originalText).addOnSuccessListener {
