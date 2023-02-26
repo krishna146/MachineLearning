@@ -37,12 +37,14 @@
         app:layout_constraintVertical_bias="1.0">
 
         <EditText
+            android:id="@+id/etEnterMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="8"
             android:hint="Enter Message" />
 
         <Button
+            android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

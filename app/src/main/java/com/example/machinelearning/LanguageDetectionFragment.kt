@@ -2,17 +2,14 @@ package com.example.machinelearning
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.machinelearning.databinding.FragmentChatBotBinding
-import com.example.machinelearning.databinding.FragmentHomeBinding
+import androidx.fragment.app.Fragment
 import com.example.machinelearning.databinding.FragmentLanguageDetectionBinding
 import com.example.machinelearning.util.TAG
 import com.google.mlkit.nl.languageid.LanguageIdentification
-import com.google.mlkit.nl.languageid.LanguageIdentifier
+import java.util.*
 
 
 class LanguageDetectionFragment : Fragment() {
@@ -30,24 +27,27 @@ class LanguageDetectionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        detectLanguage("how are you")
+        binding.btnDetectLanguage.setOnClickListener {
+            val text = binding.etEnterText.text.toString()
+            detectLanguage(text)
+        }
     }
 
     private fun detectLanguage(langText: String) {
         val languageIdentifier = LanguageIdentification.getClient()
+        var textViewText: String = ""
         languageIdentifier.identifyLanguage(langText)
             .addOnSuccessListener { languageCode ->
-                if (languageCode == "und") {
-                    Toast.makeText(requireContext(), "Can't identify language.", Toast.LENGTH_SHORT)
-                        .show()
+                if (languageCode == "ud") {
+                    binding.txtDetectedLang.text = "Can't detect Language"
                 } else {
-                    Toast.makeText(requireContext(), "Language: $languageCode", Toast.LENGTH_SHORT)
-                        .show()
+                    val loc = Locale(languageCode)
+                    val name = loc.getDisplayLanguage(loc)
+                    binding.txtDetectedLang.text = name
                 }
             }
             .addOnFailureListener {
-                Toast.makeText(requireContext(), "some error occurred", Toast.LENGTH_SHORT)
-                    .show()
+                binding.txtDetectedLang.text = "Some Error Occurred"
             }
 
     }
