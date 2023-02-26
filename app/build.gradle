@@ -59,13 +59,18 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
 
-
     //firebase dependencies for image labeling
     implementation 'com.google.mlkit:image-labeling-custom:17.0.1'
     implementation 'com.google.android.gms:play-services-mlkit-image-labeling:16.0.8'
 
     //language detection library
     implementation 'com.google.mlkit:language-id:17.0.4'
+
+    //language translation library
+    implementation 'com.google.mlkit:translate:17.0.1'
+
+    //sweet alert dialog box
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
 
 
 }
