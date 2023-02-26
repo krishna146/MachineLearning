@@ -63,6 +63,10 @@ dependencies {
     implementation 'com.google.mlkit:image-labeling-custom:17.0.1'
     implementation 'com.google.android.gms:play-services-mlkit-image-labeling:16.0.8'
 
+    //smart reply
+    implementation 'com.google.mlkit:smart-reply:17.0.2'
+    implementation 'com.google.android.gms:play-services-mlkit-smart-reply:16.0.0-beta1'
+
     //language detection library
     implementation 'com.google.mlkit:language-id:17.0.4'
 

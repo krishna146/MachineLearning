@@ -7,7 +7,7 @@
     tools:context=".ChatBotFragment">
 
     <TextView
-        android:id="@+id/txtBot"
+        android:id="@+id/txtReply"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -33,11 +33,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBot"
+        app:layout_constraintTop_toBottomOf="@+id/txtReply"
         app:layout_constraintVertical_bias="1.0">
 
         <EditText
-            android:id="@+id/etEnterMessage"
+            android:id="@+id/etMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="8"
