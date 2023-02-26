@@ -30,8 +30,8 @@ class TextTransFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setUpProgressDialog()
         binding.btnTranslate.setOnClickListener {
+            setUpProgressDialog()
             originalText = binding.etEnteredText.text.toString()
             if (originalText == "") {
                 Toast.makeText(requireContext(), "Please enter the text man", Toast.LENGTH_SHORT)
