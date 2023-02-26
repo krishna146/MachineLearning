@@ -44,13 +44,28 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    implementation 'com.google.mlkit:image-labeling-custom:17.0.1'
-    implementation platform('com.google.firebase:firebase-bom:31.2.2')
-    implementation 'com.google.android.gms:play-services-mlkit-image-labeling:16.0.8'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
     //navigation component
-    def nav_version = "2.4.2"
+    def nav_version = "2.5.3"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+
+    //fire base(common Library) firebase bom + google analytics
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+
+    //firebase dependencies for image labeling
+    implementation 'com.google.mlkit:image-labeling-custom:17.0.1'
+    implementation 'com.google.android.gms:play-services-mlkit-image-labeling:16.0.8'
+
+    //language detection library
+    implementation 'com.google.mlkit:language-id:17.0.4'
+
+
 }
